@@ -51,7 +51,8 @@ class _FluidCardState extends State<FluidCard> {
         return Stack(
           alignment: Alignment.center,
           fit: StackFit.expand,
-          children: <Widget>[
+          children: [
+            /// todo: remove this if want to use only fluid image
             Transform.translate(
               offset: Offset(-(scaleX - 1) / 2 * width, -(scaleY - 1) / 2 * height + offsetY),
               child: Transform(
@@ -59,13 +60,13 @@ class _FluidCardState extends State<FluidCard> {
                 child: Container(
                   decoration: BoxDecoration(
                     color: widget.altColor,
-                    // image: DecorationImage(
-                    //   image: AssetImage('assets/images/Bg-${widget.color}.png'),
-                    //   fit: BoxFit.cover,
-                    // ),
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/Bg-${widget.imageColorName}.png'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-                // child: Image.asset('assets/images/Bg-${widget.color}.png', fit: BoxFit.cover),
+                // child: Image.asset('assets/images/Bg-${widget.imageColorName}.png', fit: BoxFit.cover),
               ),
             ),
 
