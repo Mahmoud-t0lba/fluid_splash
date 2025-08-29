@@ -137,7 +137,6 @@ class FluidCarouselState extends State<FluidCarousel> with SingleTickerProviderS
     return _dragCompleted;
   }
 
-  // gesture ko khatam krny k liye
   void _handlePanEnd(DragEndDetails details, Size size) {
     edge.applyTouchOffset();
   }
